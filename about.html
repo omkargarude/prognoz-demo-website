@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aboutus</title>
+
+    <style>
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Top bar */
+    .top-bar {
+      background-color: #2e5bff;
+      color: white;
+      font-size: 14px;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar .left span {
+      margin-right: 20px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .top-bar .left span i {
+      margin-right: 5px;
+    }
+
+    .top-bar .right a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 50px;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .navbar .logo img {
+      height: 40px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      margin: 0 15px;
+      position: relative;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: black;
+      font-size: 15px;
+    }
+
+    .navbar ul li a.active {
+      color: #000000;
+      
+      padding-bottom: 5px;
+    }
+
+    /* Dropdown */
+    .navbar ul li ul {
+      display: none;
+      position: absolute;
+      background: white;
+      list-style: none;
+      padding: 10px;
+      top: 30px;
+      left: 0;
+      border: 1px solid #ddd;
+    }
+
+    .navbar ul li:hover ul {
+      display: block;
+    }
+
+    .navbar ul li ul li {
+      margin: 5px 0;
+    }
+
+    .navbar .search {
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+
+    .header {
+      background-image: url('b7.avif');
+      background-size: cover;
+      background-position: center;
+      height: 250px;
+      position: relative;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      padding-left: 100px;
+    }
+
+    .header h1 {
+      font-size: 40px;
+      font-weight: bold;
+      color: white;
+      align-items: center;
+     
+      
+      padding-left: 50px;
+    
+    }
+
+      .about-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 100px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .about-image {
+      flex: 1;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .about-text {
+      flex: 1;
+      text-align: justify;
+      margin: 40px;
+      line-height: 1.3;
+      color: grey;
+    }
+
+ .mission-section {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 50px 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      padding: 30px 25px;
+      max-width: 500px;
+      flex: 1;
+      min-width: 280px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .card h3 span {
+      color: #216aff;
+    }
+
+    .card p {
+      color: #333;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+.team-section {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .team-section h2 {
+      font-size: 28px;
+      font-weight: bold;
+      color: #2563eb; 
+      margin-bottom: 40px;
+    }
+
+    .team-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .team-member {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 280px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+
+    .team-member img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .team-member h3 {
+      font-size: 18px;
+      font-weight: bold;
+      color: #2563eb;
+      margin-bottom: 5px;
+    }
+
+    .team-member p {
+      font-size: 14px;
+      color: #555;
+      margin: 0;
+    }
+  
+  .site-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.company-info p, .company-info em {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 18px;
+  margin-right: 12px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #00aced;
+}
+
+.contact-list i {
+  margin-right: 8px;
+  color: #00aced;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.footer-links a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}    
+
+    </style>
+</head>
+<body>
+
+        <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="left">
+      <span><i class=""></i> +91-8454071212</span>
+      <span><i class=""></i> info@prognoztech.com</span>
+      <span><i class=""></i> Enquire Now</span>
+    </div>
+    <div class="right">
+  <a href="#">Login</a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="logo2.png" alt="logo">
+    </div>
+    <ul>
+      <li><a href="prognoz.html" class="active">HOME</a></li>
+      <li><a href="#">COURSES ▼</a>
+        <ul>
+          <li><a href="#">Course 1</a></li>
+          <li><a href="#">Course 2</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="#">PLACEMENT ▼</a>
+        <ul>
+          <li><a href="#">Placement 1</a></li>
+          <li><a href="#">Placement 2</a></li>
+        </ul>
+      </li>
+      <li><a href="#">RESOURCES ▼</a>
+        <ul>
+          <li><a href="#">Resource 1</a></li>
+          <li><a href="#">Resource 2</a></li>
+        </ul>
+      </li>
+      <li><a href="#">JOBS OPENINGS</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+      <li class="search"><i class=""></i></li>
+    </ul>
+  </div>
+
+  <!-- about head -->
+ 
+<div class="header">
+    <h1>About Us</h1>
+  </div>
+    
+  <div class="about-container">
+    <div class="about-image">
+      <img src="3.png" alt="About Us Image">
+      
+    </div>
+    <div class="about-text">
+      <p>
+        Incorporated in 2011, Prognoz Technologies is a private limited company and focuses on providing employability skills and enhancing the soft skills and the technical skills of school dropouts to technical graduates and working professionals, through our meticulously design courses, established skill development processes and competent faculties.
+      </p>
+      <p>
+        The company is ISO 9001:2015 certified and led by highly qualified and experienced team who is passionate about teaching and mentoring. Our skill development process constitutes of uniquely blended training programs of technical and soft skills which transforms a trainee to become employable and to take real life challenges in industries.
+      </p>
+      <p>
+        Our USP is the validation process through which each trainee is regularly validated against the respective industrial skills and we ensure that after completing the course, each trainee acquires all necessary skills to become employable and be productive from day one.
+      </p>
+    </div>
+  </div>
+
+  <div class="mission-section">
+   
+    <div class="card">
+      <h3>Our <span>Vision</span></h3>
+      <p>
+        To become the leader in enhancing the employability skills and providing the industry with targeted and productive manpower.
+      </p>
+    </div>
+
+
+
+    <div class="card">
+      <h3>Our <span>Mission</span></h3>
+      <p>
+         Helping them to identify their uniqueness and strengths and putting them to best possible use, with a definite sense of purpose.
+      </p>
+    </div>
+  </div>
+
+
+<section class="team-section">
+    <h2>Our Team</h2>
+    <div class="team-container">
+      <div class="team-member">
+        <img src="naruto.jpg" alt="Vikash Swaroopa">
+        <h3>A B C</h3>
+        <p>Director</p>
+      </div>
+
+      <div class="team-member">
+        <img src="sasuke.jpeg" alt="G.S. Mohapatra">
+        <h3>E F G</h3>
+        <p>Business Head</p>
+      </div>
+
+      <div class="team-member">
+        <img src="pain.jpeg" alt="Sanoj Amat">
+        <h3>X Y Z</h3>
+        <p>Head - Academics</p>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-col company-info">
+      <img src="logo2.png" alt="Prognoz Logo" class="footer-logo" />
+      <p><strong>Prognoz Technologies Pvt. Ltd.</strong></p>
+      <em>(An ISO 9001:2015 Company)</em>
+      <p><strong>Address:</strong><br />
+        B-202, 2nd Floor, Nerul Railway Station Complex, Nerul (E),<br />
+        Navi Mumbai – 400706, Maharashtra, India
+      </p>
+     
+    </div>
+
+    <div class="footer-col">
+      <h4>Placement Programs</h4>
+      <ul>
+        <li>Hands-On Technical Project</li>
+        <li>AI Integrated Digital Marketing</li>
+        <li>Data Analytics</li>
+        <li>Full Stack Web Developer</li>
+        <li>Front-End Web Developer</li>
+        <li>Full Stack Python Developer</li>
+        <li>Full Stack Java Developer</li>
+        <li>Full Stack .Net Developer</li>
+        <li>Software Testing</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Certification Courses</h4>
+      <ul>
+        <li>Power BI</li>
+        <li>.NET CORE</li>
+        <li>Spring Boot with Hibernate</li>
+        <li>Data Analysis with Python</li>
+        <li>React JS</li>
+        <li>Social Media Marketing</li>
+        <li>Advanced Excel</li>
+        <li>Javascript</li>
+        <li>Manual Testing</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <ul class="contact-list">
+        <li><strong>Navi Mumbai (Head Office)</strong></li>
+        <li><i class=""></i> +91-84324534533, +91-84453534565</li>
+        <li><i class=""></i> info@prognoztech.com</li>
+        <li><i class=""></i> Delhi & NCR: +91-3242345464</li>
+        <li><i class=""></i> Bengaluru: +91-9323242333</li>
+        <li><i class=""></i> Patna: +91-3248264643</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © 2025 Prognoz Technologies Pvt. Ltd.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of use</a>
+      <a href="#">Disclaimer</a>
+    </div>
+  </div>
+</footer> 
+  
+</body>
+</html>

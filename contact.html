@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Top bar */
+    .top-bar {
+      background-color: #2e5bff;
+      color: white;
+      font-size: 14px;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar .left span {
+      margin-right: 20px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .top-bar .left span i {
+      margin-right: 5px;
+    }
+
+    .top-bar .right a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 50px;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .navbar .logo img {
+      height: 40px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      margin: 0 15px;
+      position: relative;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: black;
+      font-size: 15px;
+    }
+
+    .navbar ul li a.active {
+      color: #000000;
+      
+      padding-bottom: 5px;
+    }
+
+    /* Dropdown */
+    .navbar ul li ul {
+      display: none;
+      position: absolute;
+      background: white;
+      list-style: none;
+      padding: 10px;
+      top: 30px;
+      left: 0;
+      border: 1px solid #ddd;
+    }
+
+    .navbar ul li:hover ul {
+      display: block;
+    }
+
+    .navbar ul li ul li {
+      margin: 5px 0;
+    }
+
+    .navbar .search {
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+
+    .header {
+      background-image: url('b5.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 250px;
+      position: relative;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      padding-left: 100px;
+    }
+
+    .header h1 {
+      font-size: 40px;
+      font-weight: bold;
+      color: white;
+      align-items: center;
+     
+      
+      padding-left: 50px;
+    }
+
+
+
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 16px;
+    }
+
+    
+
+    .required {
+      color: red;
+
+    }
+
+    button {
+      background-color: #216aff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100px;
+      
+
+    }
+
+    button:hover {
+      background-color: #194ed1;
+    }
+
+
+    .site-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.company-info p, .company-info em {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 18px;
+  margin-right: 12px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #00aced;
+}
+
+.contact-list i {
+  margin-right: 8px;
+  color: #00aced;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.footer-links a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+   
+</style>
+<body>
+    
+
+    <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="left">
+      <span><i class=""></i> +91-8454071212</span>
+      <span><i class=""></i> info@prognoztech.com</span>
+      <span><i class=""></i> Enquire Now</span>
+    </div>
+    <div class="right">
+  <a href="#">Login</a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="logo2.png" alt="logo">
+    </div>
+    <ul>
+      <li><a href="prognoz.html" class="active">HOME</a></li>
+      <li><a href="#">COURSES ▼</a>
+        <ul>
+          <li><a href="#">Course 1</a></li>
+          <li><a href="#">Course 2</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="#">PLACEMENT ▼</a>
+        <ul>
+          <li><a href="#">Placement 1</a></li>
+          <li><a href="#">Placement 2</a></li>
+        </ul>
+      </li>
+      <li><a href="#">RESOURCES ▼</a>
+        <ul>
+          <li><a href="#">Resource 1</a></li>
+          <li><a href="#">Resource 2</a></li>
+        </ul>
+      </li>
+      <li><a href="#">JOBS OPENINGS</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+      <li class="search"><i class=""></i></li>
+    </ul>
+  </div>
+
+
+<!-- about head -->
+ 
+<div class="header">
+    <h1>Contact Us</h1>
+  </div>
+
+  <div class="container">
+    <h2>Get In Touch With Us</h2>
+    <form>
+      <label for="name">Name <span class="required">*</span></label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email <span class="required">*</span></label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mobile">Mobile No. <span class="required">*</span></label>
+      <input type="tel" id="mobile" name="mobile" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+
+  <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-col company-info">
+      <img src="logo2.png" alt="Prognoz Logo" class="footer-logo" />
+      <p><strong>Prognoz Technologies Pvt. Ltd.</strong></p>
+      <em>(An ISO 9001:2015 Company)</em>
+      <p><strong>Address:</strong><br />
+        B-202, 2nd Floor, Nerul Railway Station Complex, Nerul (E),<br />
+        Navi Mumbai – 400706, Maharashtra, India
+      </p>
+     
+    </div>
+
+    <div class="footer-col">
+      <h4>Placement Programs</h4>
+      <ul>
+        <li>Hands-On Technical Project</li>
+        <li>AI Integrated Digital Marketing</li>
+        <li>Data Analytics</li>
+        <li>Full Stack Web Developer</li>
+        <li>Front-End Web Developer</li>
+        <li>Full Stack Python Developer</li>
+        <li>Full Stack Java Developer</li>
+        <li>Full Stack .Net Developer</li>
+        <li>Software Testing</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Certification Courses</h4>
+      <ul>
+        <li>Power BI</li>
+        <li>.NET CORE</li>
+        <li>Spring Boot with Hibernate</li>
+        <li>Data Analysis with Python</li>
+        <li>React JS</li>
+        <li>Social Media Marketing</li>
+        <li>Advanced Excel</li>
+        <li>Javascript</li>
+        <li>Manual Testing</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <ul class="contact-list">
+        <li><strong>Navi Mumbai (Head Office)</strong></li>
+        <li><i class=""></i> +91-84324534533, +91-84453534565</li>
+        <li><i class=""></i> info@prognoztech.com</li>
+        <li><i class=""></i> Delhi & NCR: +91-3242345464</li>
+        <li><i class=""></i> Bengaluru: +91-9323242333</li>
+        <li><i class=""></i> Patna: +91-3248264643</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © 2025 Prognoz Technologies Pvt. Ltd.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of use</a>
+      <a href="#">Disclaimer</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
